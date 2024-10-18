@@ -1,0 +1,11 @@
+version: '3'
+services:
+  tech-musings:
+    image: node:latest
+    ports:
+      - 3000:3000
+    volumes:
+      - ..:/workspace/tech-musings
+    tty: true
+    restart: always
+    init: true
