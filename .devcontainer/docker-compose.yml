@@ -7,5 +7,5 @@ services:
     volumes:
       - ..:/workspace/tech-musings
     tty: true
-    restart: always
+    # restart: always
     init: true
