@@ -2,19 +2,6 @@ export default async function article({ params }) {
     console.log(params.id)
     return (
         <>
-            <header className="bg-white shadow-md">
-                <nav className="container mx-auto px-6 py-3">
-                    <div className="flex justify-between items-center">
-                        <div className="text-xl font-bold text-gray-800">My Stylish Blog</div>
-                        <div className="hidden md:flex items-center space-x-4">
-                            <a href="#" className="text-gray-800 hover:text-blue-500">Home</a>
-                            <a href="#" className="text-gray-800 hover:text-blue-500">About</a>
-                            <a href="#" className="text-gray-800 hover:text-blue-500">Contact</a>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-
             <main className="container mx-auto px-6 py-8">
                 <article className="bg-white rounded-lg shadow-md overflow-hidden">
                     <img src="https://source.unsplash.com/random/1200x400" alt="Blog post image" className="w-full h-96 object-cover"/>
@@ -63,12 +50,6 @@ export default async function article({ params }) {
                     </div>
                 </div>
             </main>
-
-            <footer className="bg-gray-800 text-white py-6 mt-8">
-                <div className="container mx-auto px-6 text-center">
-                    <p>&copy; 2024 My Stylish Blog. All rights reserved.</p>
-                </div>
-            </footer>
         </>
     )
 }
