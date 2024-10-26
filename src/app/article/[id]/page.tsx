@@ -1,7 +1,13 @@
+import ClientComp from "../_components/ClientComp";
+
 export default async function article({ params }) {
     console.log(params.id)
+
+    
+
     return (
         <>
+        <ClientComp />
             <main className="container mx-auto px-6 py-8">
                 <article className="bg-white rounded-lg shadow-md overflow-hidden">
                     <img src="https://source.unsplash.com/random/1200x400" alt="Blog post image" className="w-full h-96 object-cover"/>
