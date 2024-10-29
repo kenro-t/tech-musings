@@ -18,7 +18,7 @@ export default async function Home() {
         <main className="container mx-auto px-6 py-8">
             {<TopArticleCard content={topContent} />}
             <div className="grid md:grid-cols-2 gap-8">
-                {data.contents.map(content => <ArticleCard content={content} />)}
+                {data.contents.map(content => <ArticleCard key={content.id} content={content} />)}
             </div>
         </main>
     );
