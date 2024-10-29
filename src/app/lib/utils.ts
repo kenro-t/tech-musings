@@ -17,3 +17,12 @@ export const formatDate = (dateString) => {
     
     return `${month} ${day}, ${year}`;
 }
+
+// 文字列を丸めて…を付けて表示する
+export const truncateContent = (contentText) => {
+    const maxLength = 100;
+    const suffix = '...';
+    if (contentText.length > maxLength) {
+        return contentText.slice(0, maxLength) + suffix;
+    }
+}
