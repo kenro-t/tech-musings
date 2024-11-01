@@ -1,16 +1,10 @@
 export default function Header() {
-    return (
-        <header className="bg-white shadow-md">
-            <nav className="container mx-auto px-6 py-3">
-                <div className="flex justify-between items-center">
-                    <div className="text-xl font-bold text-gray-800">My Stylish Blog</div>
-                    <div className="hidden md:flex items-center space-x-4">
-                        <a href="#" className="text-gray-800 hover:text-blue-500">Home</a>
-                        <a href="#" className="text-gray-800 hover:text-blue-500">About</a>
-                        <a href="#" className="text-gray-800 hover:text-blue-500">Contact</a>
-                    </div>
-                </div>
-            </nav>
-        </header>
-    );
+  return (
+    <header className="bg-white shadow-md">
+      <div className="container mx-auto px-4 py-6">
+        <h1 className="text-3xl font-bold text-gray-800">Tech Innovators</h1>
+        <p className="text-gray-600 mt-2">最新の技術トレンドと洞察</p>
+      </div>
+    </header>
+  );
 }
