@@ -1,55 +1,17 @@
+import TopArticleCard from "@/app/components/elements/Card/TopArticleCard";
+import ArticleCard from "@/app/components/elements/Card/ArticleCard";
+
 export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <nav className="bg-blue-600 text-white">
-        <div className="container mx-auto px-4 py-3">
-          <ul className="flex space-x-6">
-            <li>
-              <a href="#" className="hover:text-blue-200">
-                ホーム
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-blue-200">
-                記事
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-blue-200">
-                カテゴリー
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-blue-200">
-                About
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
       <main className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-2">
-            <article className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img
-                src="https://via.placeholder.com/800x400"
-                alt="記事のサムネイル"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                  最新のAI技術が変える未来の働き方
-                </h2>
-                <p className="text-gray-600 mb-4">
-                  人工知能の進化により、私たちの仕事環境は大きく変わろうとしています。本記事では、AIが職場にもたらす変革と、それに伴う課題について深掘りします。
-                </p>
-                <a href="#" className="text-blue-600 hover:underline">
-                  続きを読む →
-                </a>
-              </div>
-            </article>
+            <TopArticleCard />
 
             <div className="mt-8 space-y-8">
+              <ArticleCard />
+              <ArticleCard />
               <article className="bg-white rounded-lg shadow-md p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">
                   Reactの最新アップデートとその影響
