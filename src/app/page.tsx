@@ -3,20 +3,31 @@ import ArticleCard from "@/app/components/elements/Card/ArticleCard";
 import CategoryMenu from "@/app/components/layouts/CategoryMenu";
 import RecentPosts from "@/app/components/layouts/RecentPosts";
 
-export default function Home() {
+export default async function Home() {
+  // どこかで一元管理するべき
+  const baseUrl = "http://localhost:3000";
+  const data = await fetch(`${baseUrl}/api/v1/article`).then((res) => {
+    if (!res.ok) {
+      // エラーハンドリング
+    }
+
+    return res.json();
+  });
+
+  // 一番上のコンテンツのみ取り出し
+  const topContent = data.contents.shift();
+
   return (
     <div className="bg-gray-100 min-h-screen">
       <main className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-2">
-            <TopArticleCard />
+            <TopArticleCard content={topContent} />
 
             <div className="mt-8 space-y-8">
-              <ArticleCard />
-              <ArticleCard />
-              <ArticleCard />
-              <ArticleCard />
-              <ArticleCard />
+              {data.contents.map((content) => {
+                return <ArticleCard content={content} />;
+              })}
             </div>
           </div>
 

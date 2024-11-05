@@ -1,14 +1,13 @@
-export default function ArticleCard() {
+import { extractTags, truncateContent } from "@/app/lib/utils";
+
+export default function ArticleCard({ content }) {
   return (
     <article className="bg-white rounded-lg shadow-md p-6">
-      <h3 className="text-xl font-bold text-gray-800 mb-2">
-        Reactの最新アップデートとその影響
-      </h3>
+      <h3 className="text-xl font-bold text-gray-800 mb-2">{content.title}</h3>
       <p className="text-gray-600 mb-4">
-        React
-        18の新機能と、それがフロントエンド開発にもたらす変化について解説します。
+        {truncateContent(extractTags(content.content))}
       </p>
-      <a href="#" className="text-blue-600 hover:underline">
+      <a href={`/article/${content.id}`} className="text-blue-600 hover:underline">
         続きを読む →
       </a>
     </article>

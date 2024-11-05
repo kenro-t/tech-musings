@@ -25,4 +25,5 @@ export const truncateContent = (contentText) => {
     if (contentText.length > maxLength) {
         return contentText.slice(0, maxLength) + suffix;
     }
+    return contentText
 }

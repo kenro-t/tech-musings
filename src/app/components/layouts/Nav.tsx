@@ -4,22 +4,22 @@ export default function Nav() {
       <div className="container mx-auto px-4 py-3">
         <ul className="flex space-x-6">
           <li>
-            <a href="#" className="hover:text-blue-200">
+            <a href="/" className="hover:text-blue-200">
               ホーム
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-blue-200">
+            <a href="/article" className="hover:text-blue-200">
               記事
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-blue-200">
+            <a href="/category" className="hover:text-blue-200">
               カテゴリー
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-blue-200">
+            <a href="/about" className="hover:text-blue-200">
               About
             </a>
           </li>
