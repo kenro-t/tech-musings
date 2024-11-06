@@ -1,27 +1,29 @@
+import Link from "next/link";
+
 export default function Nav() {
   return (
     <nav className="bg-blue-600 text-white">
       <div className="container mx-auto px-4 py-3">
         <ul className="flex space-x-6">
           <li>
-            <a href="/" className="hover:text-blue-200">
+            <Link href="/" className="hover:text-blue-200">
               ホーム
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/article" className="hover:text-blue-200">
+            <Link href="/article" className="hover:text-blue-200">
               記事
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/category" className="hover:text-blue-200">
+            <Link href="/category" className="hover:text-blue-200">
               カテゴリー
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/about" className="hover:text-blue-200">
+            <Link href="/about" className="hover:text-blue-200">
               About
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

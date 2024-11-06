@@ -1,4 +1,5 @@
 import { extractTags, truncateContent } from "@/app/lib/utils";
+import Link from "next/link";
 
 export default function TopArticleCard({ content }) {
   return (
@@ -15,9 +16,12 @@ export default function TopArticleCard({ content }) {
         <p className="text-gray-600 mb-4">
           {truncateContent(extractTags(content.content))}
         </p>
-        <a href={`/article/${content.id}`} className="text-blue-600 hover:underline">
+        <Link
+          href={`/article/${content.id}`}
+          className="text-blue-600 hover:underline"
+        >
           続きを読む →
-        </a>
+        </Link>
       </div>
     </article>
   );

@@ -26,7 +26,7 @@ export default async function Home() {
 
             <div className="mt-8 space-y-8">
               {data.contents.map((content) => {
-                return <ArticleCard content={content} />;
+                return <ArticleCard key={content.id} content={content} />;
               })}
             </div>
           </div>
