@@ -1,4 +1,4 @@
-import { extractTags, truncateContent } from "@/app/lib/utils";
+import { extractTags, truncateContent } from "@/lib/utils";
 import Link from "next/link";
 
 export default function TopArticleCard({ content }) {

@@ -1,6 +1,6 @@
-import { formatDate } from "@/app/lib/utils";
-import CategoryMenu from "@/app/components/layouts/CategoryMenu";
-import RecentPosts from "@/app/components/layouts/RecentPosts";
+import { formatDate } from "@/lib/utils";
+import CategoryMenu from "@/components/layouts/CategoryMenu";
+import RecentPosts from "@/components/layouts/RecentPosts";
 
 export default async function ArticlePage({ params }) {
   const { id } = await params;

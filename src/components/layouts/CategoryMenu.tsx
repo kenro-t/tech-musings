@@ -1,4 +1,4 @@
-import CategoryCard from "@/app/components/elements/Card/CategoryCard";
+import CategoryCard from "@/components/elements/Card/CategoryCard";
 
 export default function CategoryMenu() {
   return (

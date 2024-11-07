@@ -1,7 +1,7 @@
-import TopArticleCard from "@/app/components/elements/Card/TopArticleCard";
-import ArticleCard from "@/app/components/elements/Card/ArticleCard";
-import CategoryMenu from "@/app/components/layouts/CategoryMenu";
-import RecentPosts from "@/app/components/layouts/RecentPosts";
+import TopArticleCard from "@/components/elements/Card/TopArticleCard";
+import ArticleCard from "@/components/elements/Card/ArticleCard";
+import CategoryMenu from "@/components/layouts/CategoryMenu";
+import RecentPosts from "@/components/layouts/RecentPosts";
 
 export default async function Home() {
   // どこかで一元管理するべき
