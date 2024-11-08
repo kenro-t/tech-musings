@@ -2,9 +2,17 @@ import { formatDate } from "@/lib/utils";
 import CategoryMenu from "@/components/layouts/CategoryMenu";
 import RecentPosts from "@/components/layouts/RecentPosts";
 
-export default async function ArticlePage({ params }) {
+type Params = {
+  [key: string]: string | string[];
+};
+
+interface PageProps {
+  params: Params;
+}
+
+export default async function ArticlePage({ params }: PageProps) {
   const { id } = await params;
-  const baseUrl = "http://localhost:3000";
+  const baseUrl: string = "http://localhost:3000";
   const data = await fetch(`${baseUrl}/api/v1/article/${id}`).then((res) => {
     if (!res.ok) {
       // エラーハンドリング
