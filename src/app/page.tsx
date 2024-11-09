@@ -3,7 +3,22 @@ import ArticleCard from "@/components/elements/Card/ArticleCard";
 import CategoryMenu from "@/components/layouts/CategoryMenu";
 import RecentPosts from "@/components/layouts/RecentPosts";
 
-export default async function Home() {
+type BlogContents = {
+  contents: BlogContent[];
+};
+
+type BlogContent = {
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date;
+  // revisedAt: Date,
+  title: string | null;
+  contents: string[] | null;
+  category: string | null;
+};
+
+export async function fetchBlogContents(): Promise<BlogContents> {
   // どこかで一元管理するべき
   const baseUrl = "http://localhost:3000";
   const data = await fetch(`${baseUrl}/api/v1/article`).then((res) => {
@@ -13,6 +28,13 @@ export default async function Home() {
 
     return res.json();
   });
+
+  return data;
+}
+
+export default async function Home() {
+  const data = await fetchBlogContents();
+  // console.log(data);
 
   // 一番上のコンテンツのみ取り出し
   const topContent = data.contents.shift();
